@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosso Dossi-Контакты</title>
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+    
+    nav a {
+    margin: 0;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 90px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    background-image: linear-gradient(rgb(184, 101, 232) 39%, rgb(255, 0, 195));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start ;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    width: 110px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contact{
+  background-image: linear-gradient( rgb(255, 0, 195), rgb(184, 101, 232));
+}
+
+
+nav a {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: lightgray;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+h3{
+    text-align: center;
+}
+
+
+.contact b {
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 22px;
+}
+
+
+.conets {
+    background-image: linear-gradient(rgb(184, 101, 232), rgb(255, 0, 195));
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+.contact {
+    margin: 0;
+    min-height: 0;
+    padding: 40px 20px;
+}
+
+.contact h3 {
+    margin: 15px 0;
+}
+
+.conets {
+    margin-top: 0;
+}
+
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    flex: 1;
+}
+
+.conets {
+    margin-top: 0;
+}
+
+
+</style>
+    
+</head>
+<body>
+
+<header>
+  <img src="./logo.png" class="logo" alt="Dosso Dossi">
+
+<nav>
+    <a href="./index.html">Главная</a>
+    <a href="./contact.html" class="active">Контакты</a>
+    <a href="./brend.html">О бренде</a>
+    <a href="./Do'kon.html">Наши магазины и их локация</a>
+</nav>
+
+</header>
+
+<section class="contact">
+
+    <b>Контакты для связи</b>
+    <h3>+998 (93)-720 20-39</h3>
+    <h3>+998 (97)-577 05-55</h3>
+    <h3>+998 (93)-720 00-39</h3>
+
+    <b>Это наши контакты для связи</b>
+</section>
+
+
+<footer class="conets">
+    <h3>Dosso Dossi</h3>
+
+    <p>О бренде | Контакты | Наши магазины</p>
+
+    <p>Телефон: +998 (93) 720-20-39</p>
+
+    <p>©2026 Dosso Dossi. Все права защищены.</p>
+
+    
+<div class="social-icons">
+    <a href="https://www.instagram.com/dossodossisam/"
+       target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+    </a>
+
+    <a href="https://t.me/dosso_dossiUzsam"
+       target="_blank" aria-label="Telegram">
+        <i class="fa-brands fa-telegram"></i>
+        Telegram
+    </a>
+</div>
+
+</footer>
+
+</body>
+</html>

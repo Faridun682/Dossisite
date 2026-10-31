@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О бренде Dosso Dossi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            min-height: 90px;
+            padding: 10px 30px;
+            background-image: linear-gradient(
+                rgb(177, 133, 0) 39%,
+                rgb(105, 76, 2)
+            );
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 110px;
+            height: 70px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        nav a {
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: lightgray;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ОСНОВНОЙ БЛОК */
+        .infob {
+            background-image: linear-gradient(
+                rgb(255, 248, 220),
+                rgb(218, 190, 120)
+            );
+            padding: 25px;
+            min-height: calc(100vh - 90px);
+        }
+
+        .infob h1 {
+            text-align: center;
+            color: rgb(105, 76, 2);
+            font-size: 32px;
+            text-shadow: 1px 1px 3px #c9ad61;
+            margin: 25px 0;
+        }
+
+        .infob pre {
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.8;
+            color: rgb(75, 53, 0);
+            background: rgba(255, 255, 255, 0.45);
+            padding: 25px;
+            border-left: 5px solid rgb(177, 133, 0);
+            border-radius: 8px;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 0;
+        }
+
+        /* ГАЛЕРЕЯ */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: calc(25% - 12px);
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 18px rgba(105, 76, 2, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .gallery img {
+                width: calc(50% - 10px);
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .infob {
+                padding: 15px;
+                min-height: calc(100vh - 90px);
+            }
+
+            .infob h1 {
+                font-size: 27px;
+            }
+
+            .infob pre {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .gallery {
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .gallery img {
+                width: calc(50% - 5px);
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="./logo.png" class="logo" alt="Dosso Dossi">
+
+    <nav>
+        <a href="./index.html">Главная</a>
+        <a href="./contact.html">Контакты</a>
+        <a href="./brend.html" class="active">О бренде</a>
+        <a href="./Do'kon.html">Наши магазины и их локация</a>
+    </nav>
+</header>
+
+<section class="infob">
+
+    <h1>О нашем бренде</h1>
+
+    <pre>Магазин турецкой моды <b>Dosso Dossi</b> в Самарканде.
+
+Это одна из главных точек оригинального турецкого текстиля премиум-класса в Самарканде. Благодаря прямым закупкам у производителей в Стамбуле магазин предлагает покупателям качественную продукцию и широкий выбор.</pre>
+
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZM9FnzzqNgMegSgwu1i4lDELb4OQvK1sM1eDhT9YLuQ&s=10" alt="Мода Dosso Dossi">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ZCxHb8MUf57lwKDzgzdIDViPVh6_wdUF7sQkeI6AYg&s=10" alt="Коллекция Dosso Dossi">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15ZUiDXl52uNCAMGMr1Ws4dV5Eqo4UxuPtJGmjvYB3w&s=10" alt="Одежда Dosso Dossi">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKVHwCAbqoaa-GeTTdl6b5psDbfy-l8oERPq6pTm5O6A&s" alt="Стиль Dosso Dossi">
+    </div>
+
+</section>
+
+</body>
+</html>

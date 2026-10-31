@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши магазины | Dosso Dossi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: rgb(255, 248, 220);
+        }
+
+        /* ШАПКА */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            min-height: 90px;
+            padding: 10px 30px;
+            background-image: linear-gradient(
+                rgb(177, 133, 0) 39%,
+                rgb(105, 76, 2)
+            );
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 110px;
+            height: 70px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        nav a {
+            position: relative;
+            padding-bottom: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: lightgray;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ОСНОВНАЯ ЧАСТЬ */
+        .shops {
+            padding: 30px 25px;
+            min-height: calc(100vh - 90px);
+            background-image: linear-gradient(
+                rgb(255, 248, 220),
+                rgb(218, 190, 120)
+            );
+        }
+
+        .shops h1 {
+            text-align: center;
+            color: rgb(105, 76, 2);
+            font-size: 32px;
+            margin: 15px 0 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #725b25;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* КАРТОЧКА МАГАЗИНА */
+        .shop-card {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid #d7c184;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .shop-card h2 {
+            color: #694c02;
+            font-size: 23px;
+            margin: 0 0 15px;
+        }
+
+        .shop-card p {
+            color: #403722;
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 10px 0;
+        }
+
+        .shop-card b {
+            color: #694c02;
+        }
+
+        .location-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #8b6909;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .location-btn:hover {
+            background: #604700;
+        }
+
+        /* ПОДВАЛ */
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(
+                rgb(177, 133, 0),
+                rgb(105, 76, 2)
+            );
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        /* ТЕЛЕФОНЫ */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .shops {
+                padding: 20px 15px;
+            }
+
+            .shops h1 {
+                font-size: 27px;
+            }
+
+            .shop-card {
+                padding: 20px;
+            }
+
+            .shop-card h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="./logo.png" class="logo" alt="Dosso Dossi">
+
+    <nav>
+        <a href="./index.html">Главная</a>
+        <a href="./contact.html">Контакты</a>
+        <a href="./brend.html">О бренде</a>
+        <a href="./Do'kon.html" class="active">Наши магазины и их локация</a>
+    </nav>
+</header>
+
+<section class="shops">
+
+    <h1>Наши магазины</h1>
+
+    <p class="subtitle">
+        Найдите магазин Dosso Dossi и посмотрите его расположение.
+    </p>
+
+    <div class="shop-card">
+        <h2>Dosso Dossi — Самарканд</h2>
+
+        <p>
+            <b>Город:</b> Самарканд, Узбекистан
+        </p>
+
+        <p>
+            Приходите познакомиться с ассортиментом турецкой моды
+            и выбрать подходящие товары.
+        </p>
+
+        <a
+            class="location-btn"
+            href="https://www.google.com/maps/place/Yangi+bozor/@39.6623253,66.9940021,371m/data=!3m1!1e3!4m19!1m12!4m11!1m3!2m2!1d66.9549145!2d39.6566455!1m6!1m2!1s0x3f4d1f00785e4097:0xe6f85ca4f0609948!2zWWFuZ2kgYm96b3IsIEpYUjQrWDI2LCBTYW1hcnFhbmQsIFNhbWFycWFuZCB2aWxveWF0aSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!2m2!1d66.9556641!2d39.642201!3m5!1s0x3f4d18a7080f0803:0xddc1269f95d57edd!8m2!3d39.6634052!4d66.9966136!16s%2Fg%2F11cs46ym6x?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer">
+            Посмотреть на карте
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    <p><b>Dosso Dossi</b></p>
+    <p>О бренде | Контакты | Наши магазины</p>
+    <p>© 2026 Dosso Dossi. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
